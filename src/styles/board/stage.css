@@ -1,0 +1,108 @@
+.chapter {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 137px;
+  padding: 19px 26px;
+  background: #1b303b;
+  border: 1px solid #40545a;
+  border-radius: 13px;
+  margin-bottom: 16px;
+}
+#harbour {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 auto;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 400/94;
+  object-fit: contain;
+  mask-image: linear-gradient(90deg, transparent, #000 24%);
+}
+.chapter::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, #1b303b 0%, #1b303b 29%, #1b303bf2 40%, #1b303b87 54%, #1b303b00 69%);
+}
+.chapter-copy {
+  max-width: 54%;
+}
+.eyebrow,
+.micro,
+.count,
+kbd,
+#progress,
+.hero-indicator {
+  font-family: var(--mono);
+}
+.eyebrow,
+.micro {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.eyebrow {
+  gap: 6px;
+  color: var(--orange);
+}
+.region {
+  color: #ccdbd8;
+  border-left: 1px solid #728985;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+.flag {
+  width: 11px;
+  height: 12px;
+  border-left: 2px solid currentColor;
+  background: linear-gradient(150deg, currentColor 44%, transparent 45%);
+}
+h1 {
+  margin: 4px 0 3px;
+  font: 500 clamp(37px, 4.2vw, 60px) / 1.02 var(--display);
+  letter-spacing: -2.3px;
+}
+#brief {
+  font-size: 14px;
+  color: #dbe5e2;
+}
+#progress {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  display: flex;
+  gap: 3px;
+  list-style: none;
+  padding: 4px;
+  border-radius: 22px;
+  background: #122631e8;
+}
+#progress li {
+  display: flex;
+}
+#progress button {
+  width: 39px;
+  height: 34px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #d6e2df;
+  border-radius: 18px;
+  font: 650 12px var(--mono);
+  cursor: pointer;
+}
+#progress button.done {
+  color: #a5f3cf;
+}
+#progress button:hover {
+  border-color: #99aeb3;
+  background: #344954;
+}
+#progress button[aria-current] {
+  color: #1b2629;
+  background: #ffd29e;
+}

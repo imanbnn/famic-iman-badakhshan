@@ -1,0 +1,63 @@
+.play-area {
+  position: relative;
+}
+body[data-pilot="playing"] .mast,
+body[data-pilot="playing"] .chapter,
+body[data-pilot="playing"] .deck > aside {
+  opacity: 0.83;
+}
+body[data-pilot="playing"] :is(.mast, .chapter, .deck > aside):is(:hover, :focus-within) {
+  opacity: 1;
+}
+.pilot-pause {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: #0f263d3b;
+  pointer-events: none;
+}
+.resume-play {
+  pointer-events: auto;
+  gap: 12px;
+  min-height: 45px;
+  padding: 8px 16px;
+  border: 1px solid var(--cta);
+  color: var(--ink);
+  background: var(--panel);
+  box-shadow: 0 4px 15px #07192466;
+  text-align: left;
+}
+.resume-play > span:first-child {
+  color: var(--orange);
+  font-size: 19px;
+}
+.pilot-pause.off-chart .resume-play {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 3;
+}
+.resume-play strong,
+.resume-play small {
+  display: block;
+  line-height: 1.2;
+}
+.resume-play small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.resume-play strong {
+  font-size: 15px;
+}
+.has-hint .pilot-pause {
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mast,
+  .chapter,
+  .deck > aside {
+    transition: opacity 0.15s ease-out;
+  }
+}

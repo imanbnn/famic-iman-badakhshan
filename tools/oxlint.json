@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "worker": true
+  },
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "no-undef": "error",
+    "no-unused-vars": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/tests/**", "**/tools/**"],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": [
+        "**/src/app/**",
+        "**/src/game/**",
+        "**/src/ui/**",
+        "**/src/audio/playback.js",
+        "**/src/audio/music.js",
+        "**/src/render/board/viewport.js",
+        "**/src/i18n/**",
+        "**/src/render/board/fixture-layer.js",
+        "**/src/render/harbour/ripple-layout.js",
+        "**/tools/build.mjs"
+      ],
+      "rules": {
+        "no-magic-numbers": [
+          "error",
+          {
+            "ignore": [-1, 0, 1, 2],
+            "ignoreArrayIndexes": true
+          }
+        ]
+      }
+    }
+  ]
+}

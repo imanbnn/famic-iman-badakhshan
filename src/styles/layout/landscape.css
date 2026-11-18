@@ -1,0 +1,108 @@
+@media (min-width: 650px) and (max-height: 599px) and (orientation: landscape) {
+  :root {
+    --mast-height: 40px;
+  }
+  .mast-inner {
+    min-height: var(--mast-height);
+  }
+  #game {
+    padding: 5px 9px 7px;
+  }
+  .chapter {
+    min-height: 0;
+    padding: 3px 12px;
+    margin-bottom: 4px;
+  }
+  .chapter-copy {
+    max-width: calc(100% - 145px);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 14px;
+  }
+  .chapter .eyebrow {
+    grid-column: 1/-1;
+  }
+  .chapter h1 {
+    font-size: 25px;
+    margin: 2px 0;
+  }
+  .chapter #brief {
+    font-size: 12px;
+  }
+  .deck {
+    grid-template-columns: minmax(0, 1fr) clamp(192px, 25vw, 300px);
+    gap: 7px;
+  }
+  aside {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .panel {
+    padding: 10px;
+  }
+  .map-bar {
+    padding: 0 8px;
+    min-height: 30px;
+  }
+  .map-bar button {
+    min-height: 30px;
+  }
+  .signal {
+    min-height: 31px;
+    padding: 3px 8px;
+    gap: 7px;
+  }
+  .signal p {
+    display: inline;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .signal > div {
+    line-height: 1.15;
+  }
+  .signal .micro {
+    display: inline;
+    margin-right: 5px;
+  }
+  .signal-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .commands {
+    flex-wrap: nowrap;
+    gap: 5px;
+    padding: 4px 6px;
+  }
+  .commands button {
+    min-height: 34px;
+    padding-inline: 6px;
+  }
+  .commands kbd,
+  .swap kbd {
+    display: none;
+  }
+  .departure-poster {
+    min-height: calc(100dvh - var(--mast-height));
+  }
+  .departure-controls {
+    padding: 14px 18px;
+    gap: 10px;
+  }
+  .departure-controls h2 {
+    font-size: 30px;
+  }
+  .starter-options button {
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 4px;
+  }
+  .starter-options canvas {
+    width: 29px;
+    height: 29px;
+  }
+  .launch-actions {
+    padding-top: 8px;
+  }
+}

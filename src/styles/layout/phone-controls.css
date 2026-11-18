@@ -1,0 +1,235 @@
+@media (max-width: 600px) {
+  .brand {
+    font-size: 26px;
+    gap: 6px;
+  }
+  #brand-signet {
+    width: 29px;
+    height: 29px;
+  }
+  .mast-inner {
+    min-height: 52px;
+    gap: 5px;
+  }
+  nav {
+    gap: 1px;
+  }
+  nav button {
+    width: 40px;
+    height: 44px;
+    padding: 0;
+  }
+  .nav-label {
+    position: absolute;
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  main {
+    padding: 10px 0 20px;
+  }
+  .chapter {
+    min-height: 135px;
+    padding: 13px 14px;
+    align-items: flex-start;
+  }
+  .chapter-copy {
+    max-width: 74%;
+  }
+  .chapter::after {
+    background: linear-gradient(90deg, #1b303b 5%, #1b303bf5 34%, #1b303bbf 54%, #1b303b17 88%);
+  }
+  #harbour {
+    width: 80%;
+    object-fit: cover;
+    object-position: 77% center;
+  }
+  h1 {
+    font-size: 36px;
+    letter-spacing: -1.6px;
+    margin: 7px 0 4px;
+  }
+  #brief {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .eyebrow {
+    font-size: 9px;
+    gap: 4px;
+    letter-spacing: 1px;
+  }
+  .region {
+    padding-left: 6px;
+    margin-left: 3px;
+  }
+  #progress {
+    right: 6px;
+    bottom: 6px;
+    gap: 1px;
+    padding: 2px;
+  }
+  #progress button {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .map-bar {
+    padding: 1px 9px;
+  }
+  .pilot {
+    font-size: 12px;
+  }
+  .swap {
+    gap: 5px;
+  }
+  .swap kbd,
+  .commands kbd {
+    display: none;
+  }
+  .signal {
+    min-height: 55px;
+    padding: 7px 10px;
+    gap: 9px;
+  }
+  .signal p {
+    font-size: 13px;
+  }
+  .signal-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .commands {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 44px 44px;
+    padding: 8px;
+    gap: 4px 7px;
+  }
+  .arrows {
+    display: grid;
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(2, 44px);
+    grid-column: 1;
+    grid-row: 1/3;
+    gap: 4px;
+  }
+  .arrows button {
+    width: 44px;
+    height: 44px;
+  }
+  .arrows [data-action="up"] {
+    grid-area: 1/2;
+  }
+  .arrows [data-action="left"] {
+    grid-area: 2/1;
+  }
+  .arrows [data-action="down"] {
+    grid-area: 2/2;
+  }
+  .arrows [data-action="right"] {
+    grid-area: 2/3;
+  }
+  .commands .action-btn {
+    grid-column: 2/4;
+    grid-row: 1;
+    line-height: 1.1;
+  }
+  .commands .spacer {
+    display: none;
+  }
+  .commands .utility {
+    grid-row: 2;
+    min-height: var(--touch-target);
+    gap: 5px;
+  }
+
+  aside {
+    grid-template-columns: 1fr;
+  }
+  .crew .roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .hero {
+    gap: 7px;
+    padding: 6px;
+  }
+  .portrait {
+    width: 33px;
+    height: 33px;
+  }
+  .portrait canvas {
+    width: 32px;
+    height: 32px;
+  }
+  .hero strong {
+    font-size: 15px;
+  }
+  .hero small {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .hero-indicator {
+    display: none;
+  }
+  .reserve {
+    grid-column: auto;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #move-count {
+    font-size: 10px;
+    padding-left: 6px;
+    margin-left: 3px;
+  }
+}
+@media (max-width: 370px) {
+  nav button {
+    width: 35px;
+  }
+  .brand {
+    font-size: 24px;
+  }
+  .commands {
+    column-gap: 5px;
+  }
+  .commands button {
+    padding-inline: 4px;
+  }
+  .utility span {
+    position: absolute;
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  .hero .portrait {
+    width: 27px;
+    height: 27px;
+  }
+  .hero .portrait canvas {
+    width: 26px;
+    height: 26px;
+  }
+  .chapter-copy {
+    max-width: 80%;
+  }
+  .eyebrow {
+    font-size: 8px;
+  }
+  .pilot {
+    gap: 3px;
+  }
+  .swap {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button:active:enabled {
+    transform: none;
+  }
+}

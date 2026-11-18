@@ -1,0 +1,169 @@
+:root {
+  color-scheme: dark;
+  --base: #0c1721;
+  --panel: #172733;
+  --edge: #344651;
+  --ink: #f4eee3;
+  --muted: #b2c0c4;
+  --orange: #ffac6c;
+  --mint: #9ae0c6;
+  --focus: #ffca91;
+  --display: Georgia, "Times New Roman", serif;
+  --ui: "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font: 16px/1.4 var(--ui);
+  color: var(--ink);
+  background: var(--base);
+  --face: #20323d;
+  --over: #304650;
+  --mast: #111f29;
+  --quiet: #1b2e39;
+  --pending: #8aa0aa;
+  --cta: var(--orange);
+  --cta-ink: #232923;
+  --mast-height: 54px;
+  --touch-target: 44px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 32% 0%, #20323b 0, transparent 62%), var(--base);
+  cursor: default;
+  caret-color: transparent;
+}
+.mast,
+main,
+dialog {
+  user-select: none;
+  -webkit-user-select: none;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+#board {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  background: #20323d;
+  border: 1px solid var(--edge);
+  border-radius: 7px;
+}
+button:hover:enabled {
+  background: #31454e;
+  border-color: #72858a;
+}
+button:active:enabled {
+  transform: translateY(1px);
+}
+button:disabled {
+  cursor: not-allowed;
+  color: #9aa8ae;
+  background: #1a2933;
+  border-color: #31404a;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+canvas[data-icon] {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+h1,
+h2,
+p,
+ol,
+ul {
+  margin: 0;
+}
+.mast {
+  background: #111f29;
+  border-bottom: 1px solid var(--edge);
+}
+.mast-inner,
+main {
+  width: 100%;
+  margin: 0;
+}
+.mast-inner,
+nav,
+.map-bar,
+.commands,
+.arrows,
+.section-head,
+.pilot,
+.eyebrow,
+.brand,
+.hero,
+.signal {
+  display: flex;
+  align-items: center;
+}
+.mast-inner {
+  min-height: 62px;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  gap: 10px;
+  font: 700 italic 31px/0.95 var(--display);
+  letter-spacing: -1.8px;
+}
+#brand-signet {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #33525a;
+  box-shadow: inset 0 0 0 1px #66817e;
+}
+nav {
+  gap: 5px;
+}
+nav button {
+  padding: 8px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  background: transparent;
+  border-color: transparent;
+}
+.audio-mark {
+  position: relative;
+  display: inline-flex;
+}
+.audio-mark canvas {
+  display: block;
+}
+#sound[aria-pressed="false"] canvas {
+  opacity: 0.65;
+}
+#sound[aria-pressed="false"] .audio-mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 48%;
+  width: 100%;
+  height: 2px;
+  transform: rotate(-48deg);
+  background: var(--orange);
+  box-shadow: 0 1px #14232b;
+}
+main {
+  padding: 20px 0 24px;
+}

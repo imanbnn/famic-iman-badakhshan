@@ -1,0 +1,55 @@
+:root[data-theme="foam"] {
+  color-scheme: light;
+  --base: #e6eee8;
+  --panel: #f6f8ed;
+  --face: #e4eee6;
+  --over: #d2e4d8;
+  --mast: #f4f6e9;
+  --quiet: #e3ede2;
+  --edge: #a6bcae;
+  --ink: #203f39;
+  --muted: #48645c;
+  --orange: #925023;
+  --mint: #176754;
+  --pending: #80968b;
+  --cta: #1b6657;
+  --cta-ink: #fcf7e3;
+  --focus: #a64e20;
+}
+:root[data-theme="ember"] {
+  --base: #241c22;
+  --panel: #34282d;
+  --face: #46363a;
+  --over: #594247;
+  --mast: #2b2026;
+  --quiet: #3a2b30;
+  --edge: #715954;
+  --ink: #fff0db;
+  --muted: #d0b9b1;
+  --orange: #ffb277;
+  --mint: #a5d9b5;
+  --pending: #b69c8e;
+  --cta: #f4b57d;
+  --cta-ink: #321f26;
+  --focus: #ffce92;
+}
+body {
+  background: var(--base);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.mast {
+  background: var(--mast);
+  flex: none;
+}
+.mast-inner {
+  width: 100%;
+  max-width: none;
+  min-height: var(--mast-height);
+  padding: 0 clamp(12px, 2vw, 36px);
+}
+.mast {
+  position: relative;
+  z-index: 2;
+}

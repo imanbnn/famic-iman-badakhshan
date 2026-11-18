@@ -1,0 +1,19 @@
+{
+  "name": "contreflot",
+  "version": "1.6.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#app/*": "./src/app/*.js",
+    "#audio/*": "./src/audio/*.js",
+    "#game/*": "./src/game/*.js",
+    "#i18n/*": "./src/i18n/*.js",
+    "#render/*": "./src/render/*.js",
+    "#ui/*": "./src/ui/*.js"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "lint": "npx --yes oxlint@1.90.0 -c tools/oxlint.json src tests tools",
+    "test": "node --test"
+  }
+}

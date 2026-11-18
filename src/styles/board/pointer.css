@@ -1,0 +1,77 @@
+[hidden] {
+  display: none !important;
+}
+.hero[aria-pressed="true"]:disabled {
+  cursor: default;
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--wash);
+}
+.map-surface {
+  --target: #fff1c3;
+}
+.map-surface:has([data-intent="blocked"]) {
+  --target: #ffad99;
+}
+.map-surface:has(
+    #board:is(
+        [data-intent="swap"],
+        [data-intent="relay"],
+        [data-intent="bridge"],
+        [data-intent="collect"],
+        [data-intent="hold"],
+        [data-intent="finish"]
+      )
+  ) {
+  --target: #a6ffdc;
+}
+.map-surface:has([data-intent="push"]) {
+  --target: #ffd49a;
+}
+.map-surface:has([data-intent="inspect"]) {
+  --target: #c6eafb;
+}
+#target-cell,
+#push-cell {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+#target-cell {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2px 3px;
+  color: #14262d;
+  background: color-mix(in srgb, var(--target) 9%, transparent);
+  border: 2px solid var(--target);
+  box-shadow:
+    inset 0 0 0 1px #14283291,
+    0 0 0 1px #142832ab;
+  border-radius: 4px;
+  font: 800 15px/1 var(--mono);
+  text-shadow:
+    0 1px 1px var(--target),
+    1px 0 var(--target),
+    -1px 0 var(--target),
+    0 -1px var(--target);
+}
+#push-cell {
+  border: 2px dashed #70452d;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #fff1c9;
+  background: #ffe8ac3d;
+}
+#push-cell canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.49;
+}
+#move-count {
+  margin-left: 8px;
+  padding-left: 10px;
+  border-left: 1px solid #586c73;
+  font: 500 11px/1.25 var(--mono);
+  color: #c2d0d1;
+}

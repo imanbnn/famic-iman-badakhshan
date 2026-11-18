@@ -1,0 +1,91 @@
+<section class="play-area" aria-label="Terrain de jeu">
+  <div class="map-bar">
+    <span class="pilot"
+      ><i aria-hidden="true"></i><b id="pilot-name">Lest</b> <span>aux commandes</span
+      ><span class="key-focus" aria-hidden="true">⌨</span><span id="move-count"></span
+    ></span>
+    <div class="map-tools">
+      <button
+        id="board-symbols"
+        class="reference-button"
+        type="button"
+        aria-label="Symboles de la carte"
+        aria-haspopup="dialog"
+        aria-controls="symbol-guide"
+      >
+        <span class="symbol-mark" aria-hidden="true"></span><span>Symboles</span>
+      </button>
+      <button
+        id="board-cursors"
+        class="reference-button"
+        type="button"
+        aria-label="Signification des curseurs"
+        aria-haspopup="dialog"
+        aria-controls="cursor-guide"
+      >
+        <span class="info-dot" aria-hidden="true">i</span><span>Curseurs</span>
+      </button>
+      <button data-action="swap" class="swap" title="Changer de robot">
+        <canvas data-icon="swap"></canvas> Relève <kbd data-binding="swap"></kbd>
+      </button>
+    </div>
+  </div>
+  <div class="map-surface">
+    <canvas id="chart-backdrop" aria-hidden="true"></canvas>
+    <canvas id="chart-fixtures" aria-hidden="true"></canvas>
+    <canvas
+      id="board"
+      tabindex="0"
+      role="group"
+      aria-roledescription="carte interactive"
+      aria-label="Carte du bassin"
+      aria-describedby="status"
+      width="800"
+      height="488"
+    ></canvas>
+    <canvas id="water-motion" aria-hidden="true"></canvas>
+    <div id="target-cell" aria-hidden="true" hidden></div>
+    <div id="push-cell" aria-hidden="true" hidden><canvas width="104" height="104"></canvas></div>
+    <div id="pilot-pause" class="pilot-pause" hidden>
+      <button id="resume-play" class="resume-play">
+        <span aria-hidden="true">▶</span
+        ><span><small>Clavier en pause</small><strong>Reprendre le jeu</strong></span>
+      </button>
+    </div>
+  </div>
+  <section id="map-hint" class="map-hint" aria-labelledby="hint-object" hidden>
+    <div class="hint-heading">
+      <div class="hint-subject"><span id="hint-counter"></span><strong id="hint-object"></strong></div>
+      <button id="close-hint" type="button" aria-label="Fermer l’indice" aria-keyshortcuts="Escape">
+        <i class="close-cross" aria-hidden="true"></i><span>Fermer</span><kbd aria-hidden="true">Échap</kbd>
+      </button>
+    </div>
+    <p id="hint-text" role="status"></p>
+    <button id="more-hints" type="button"><span>Indice suivant</span><span aria-hidden="true">→</span></button>
+  </section>
+  <div class="signal" id="signal" data-tone="info">
+    <span class="signal-icon" id="signal-icon" aria-hidden="true">›</span>
+    <div>
+      <span class="micro" id="signal-title">Consigne</span>
+      <p id="status" role="status"></p>
+    </div>
+  </div>
+  <div class="commands">
+    <div class="arrows" role="group" aria-label="Déplacements">
+      <button data-action="left" aria-label="Aller à gauche">←</button>
+      <button data-action="up" aria-label="Monter">↑</button>
+      <button data-action="down" aria-label="Descendre">↓</button>
+      <button data-action="right" aria-label="Aller à droite">→</button>
+    </div>
+    <button data-action="act" class="action-btn">
+      <span id="act-label">Action</span> <kbd data-binding="act"></kbd>
+    </button>
+    <span class="spacer"></span>
+    <button data-action="undo" class="utility" title="Annuler le dernier coup">
+      <canvas data-icon="undo"></canvas><span>Annuler</span><kbd data-binding="undo"></kbd>
+    </button>
+    <button data-action="restart" class="utility" title="Recommencer cette escale">
+      <canvas data-icon="restart"></canvas><span>Rejouer</span><kbd data-binding="restart"></kbd>
+    </button>
+  </div>
+</section>

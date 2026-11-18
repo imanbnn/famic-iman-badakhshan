@@ -1,0 +1,24 @@
+<dialog id="settings" class="framed-dialog" aria-labelledby="settings-title">
+  <div class="modal-head">
+    <h2 id="settings-title">Réglages</h2>
+    <button data-close>Fermer</button>
+  </div>
+  <div class="dialog-scroll">
+    <fieldset>
+      <legend>Thème du poste</legend>
+      <div class="theme-choices"></div>
+    </fieldset>
+    <fieldset class="music-setting">
+      <legend>Musique</legend>
+      <button id="music" class="audio-toggle" data-music aria-pressed="false">
+        <span class="music-switch" aria-hidden="true"></span><span>Musique du port</span>
+      </button>
+    </fieldset>
+    <h3 class="settings-sub">Raccourcis clavier</h3>
+    <p>Sélectionnez une commande, puis appuyez sur la touche souhaitée.</p>
+    <p class="note">Cliquez sur la carte ou rejoignez-la avec Tab pour piloter au clavier.</p>
+    <div id="bindings" class="bindings"></div>
+    <p id="binding-status" role="status">Échap annule la saisie.</p>
+    <button id="restore-keys" class="text-btn">Rétablir les touches par défaut</button>
+  </div>
+</dialog>

@@ -1,0 +1,51 @@
+<dialog id="guide" class="framed-dialog" aria-labelledby="guide-title">
+  <div class="modal-head">
+    <h2 id="guide-title">Guide de bord</h2>
+    <button data-close aria-label="Fermer le guide">Fermer</button>
+  </div>
+  <div class="dialog-scroll">
+    <div class="lesson">
+      <canvas id="lesson-art" width="880" height="320" role="img"></canvas>
+      <div class="lesson-caption" aria-live="polite" aria-atomic="true">
+        <p class="eyebrow" id="lesson-counter"></p>
+        <h3 id="lesson-title"></h3>
+        <p id="lesson-text"></p>
+      </div>
+      <div class="lesson-reference">
+        <section>
+          <h4>Touches utiles</h4>
+          <ul id="lesson-keys"></ul>
+        </section>
+        <section>
+          <h4>Sur la carte</h4>
+          <ul id="lesson-symbols"></ul>
+        </section>
+      </div>
+    </div>
+    <div class="guide-references">
+      <button
+        id="guide-symbols"
+        class="reference-button"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="symbol-guide"
+      >
+        <span class="symbol-mark" aria-hidden="true"></span><span>Symboles de la carte</span>
+      </button>
+      <button
+        id="guide-cursors"
+        class="reference-button"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="cursor-guide"
+      >
+        <span class="info-dot" aria-hidden="true">i</span><span>Signification des curseurs</span>
+      </button>
+    </div>
+  </div>
+  <div class="modal-foot lesson-nav">
+    <button id="lesson-prev">Précédent</button>
+    <div id="lesson-dots" aria-hidden="true"></div>
+    <button id="lesson-next" class="action-btn"></button>
+  </div>
+</dialog>

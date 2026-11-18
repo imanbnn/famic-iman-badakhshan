@@ -1,0 +1,101 @@
+#game {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 12px clamp(10px, 1.25vw, 22px);
+  flex: 1;
+}
+.chapter {
+  background: #213844;
+  color: #f6f2e6;
+}
+.chapter .eyebrow {
+  color: #ffd099;
+}
+.map-bar,
+.signal {
+  background: var(--quiet);
+}
+.count,
+.hero small,
+#move-count {
+  color: var(--muted);
+}
+.hero {
+  background: var(--face);
+  border-color: var(--edge);
+}
+.hero[data-hero="lest"] {
+  --wash: color-mix(in srgb, var(--orange) 17%, var(--panel));
+}
+.hero[data-hero="sonde"] {
+  --wash: color-mix(in srgb, var(--mint) 16%, var(--panel));
+}
+#hint {
+  background: var(--face);
+  border-color: var(--edge);
+}
+#hint:hover {
+  background: var(--over);
+}
+.key-focus {
+  display: none;
+}
+.tab-navigation .play-area:has(#board:focus) .key-focus {
+  display: inline-flex;
+  padding: 0 5px;
+  color: var(--ink);
+  border: 2px solid var(--focus);
+  border-radius: 4px;
+  font-size: 14px;
+}
+#board:focus,
+#board:focus-visible {
+  outline: none !important;
+  box-shadow: none;
+}
+#chart-backdrop,
+#chart-fixtures,
+#water-motion {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#goals li,
+#goals li * {
+  cursor: default;
+}
+#progress button[aria-current] {
+  color: #1b2629;
+  background: #ffd29e;
+}
+:root[data-theme="foam"] .signal[data-tone="blocked"] {
+  --signal: #a33926;
+}
+:root[data-theme="foam"] .signal[data-tone="hint"] {
+  --signal: #885019;
+}
+:root[data-theme="foam"] .signal[data-tone="inspect"] {
+  --signal: #285871;
+}
+dialog,
+.modal-head {
+  background: var(--panel);
+  color: var(--ink);
+}
+dialog {
+  border-color: var(--edge);
+}
+.log-entries li {
+  background: var(--quiet);
+}
+kbd {
+  background: var(--base);
+  color: var(--ink);
+  border-color: var(--edge);
+}
+.binding button.listening {
+  background: color-mix(in srgb, var(--orange) 12%, var(--panel));
+}

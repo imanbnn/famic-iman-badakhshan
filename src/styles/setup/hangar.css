@@ -1,0 +1,220 @@
+.hangar-entry {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 2px 0 13px;
+  padding: 9px 12px;
+  border-color: var(--edge);
+  background: var(--face);
+  color: var(--ink);
+  text-align: left;
+}
+.hangar-entry strong {
+  font: 650 14px/1.2 var(--ui);
+}
+.hangar-entry > span:last-child {
+  margin-left: auto;
+  color: var(--orange);
+  font-size: 19px;
+}
+.fleet-sample {
+  display: flex;
+  padding: 0 2px;
+  flex: none;
+  align-items: center;
+}
+.fleet-sample canvas {
+  height: 32px;
+  width: 32px;
+  margin-left: -3px;
+}
+.departure-controls .outfitting > p {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+.hangar-shortcut {
+  padding: 4px 8px;
+  font: 600 12px var(--ui);
+  gap: 5px;
+}
+.hangar-shortcut span {
+  color: var(--orange);
+}
+#fleet {
+  width: min(720px, calc(100% - 24px));
+  --berth: var(--orange);
+}
+.fleet-tabs {
+  display: flex;
+  flex: none;
+  gap: 4px;
+  padding: 10px var(--gutter);
+  border-bottom: 1px solid var(--edge);
+}
+.fleet-tabs button {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  gap: 8px;
+}
+.fleet-tabs small {
+  font: 600 11px var(--mono);
+}
+.fleet-tabs [aria-selected="true"] {
+  background: var(--face);
+  color: var(--ink);
+  border-color: var(--edge);
+  box-shadow: inset 0 -2px var(--berth);
+}
+#tab-sonde,
+#bay-sonde {
+  --berth: var(--mint);
+}
+#fleet-scroll {
+  padding-block: 13px 16px;
+}
+#fleet [role="tabpanel"] > p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.fleet-card {
+  display: flex;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 9px 11px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: var(--face);
+  color: var(--ink);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.fleet-card input {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  appearance: none;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--quiet);
+}
+.fleet-card input:checked {
+  background: var(--berth);
+  border-color: var(--berth);
+  box-shadow: inset 0 0 0 3px var(--face);
+}
+.fleet-card:has(input:checked) {
+  border-color: var(--berth);
+  background: color-mix(in srgb, var(--berth) 11%, var(--panel));
+}
+.fleet-card:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+.fleet-card input:focus-visible {
+  outline: none;
+}
+@media (hover: hover) {
+  .fleet-card:hover {
+    background: var(--over);
+    border-color: var(--muted);
+  }
+}
+.fleet-card canvas {
+  width: 56px;
+  height: 56px;
+  align-self: center;
+}
+.fleet-card strong,
+.fleet-card small,
+.fleet-foot small,
+.fleet-foot strong {
+  display: block;
+}
+.fleet-card strong {
+  font: 650 15px/1.25 var(--ui);
+}
+.fleet-card small {
+  font: 12px/1.3 var(--ui);
+  color: var(--muted);
+}
+.fleet-foot {
+  gap: 10px;
+}
+.fleet-foot small {
+  font-size: 12px;
+  color: var(--muted);
+}
+.fleet-foot strong {
+  font: 600 15px/1.3 var(--ui);
+}
+.fleet-foot button {
+  min-height: 40px;
+  padding: 6px 15px;
+  flex: none;
+}
+@media (max-width: 600px) {
+  .fleet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .fleet-card {
+    padding: 7px;
+    gap: 3px;
+  }
+  .fleet-card canvas {
+    width: 46px;
+    height: 46px;
+  }
+  .fleet-tabs {
+    padding-block: 6px;
+  }
+}
+@media (max-width: 420px) {
+  .fleet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fleet-sample canvas {
+    width: 26px;
+    height: 26px;
+  }
+  .modal-head,
+  .modal-foot {
+    padding-block: 10px;
+  }
+}
+@media (max-height: 430px) {
+  .modal-head,
+  .modal-foot {
+    padding-block: 6px;
+  }
+  .modal-head h2 {
+    font-size: 25px;
+  }
+  .fleet-tabs {
+    padding-block: 4px;
+  }
+  .fleet-tabs button {
+    min-height: 34px;
+  }
+  .fleet-card canvas {
+    height: 40px;
+    width: 40px;
+  }
+}

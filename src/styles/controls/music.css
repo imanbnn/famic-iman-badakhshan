@@ -1,0 +1,50 @@
+.launch-preferences {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+.audio-toggle {
+  min-height: 38px;
+  padding: 6px 9px;
+  font-size: 13px;
+  gap: 7px;
+}
+.music-switch {
+  display: inline-flex;
+  align-items: center;
+  width: 26px;
+  height: 15px;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 2px;
+}
+.music-switch:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.audio-toggle[aria-pressed="true"] .music-switch {
+  justify-content: flex-end;
+  border-color: var(--mint);
+  background: color-mix(in srgb, var(--mint) 20%, var(--panel));
+}
+.audio-toggle[aria-pressed="true"] .music-switch:before {
+  background: var(--mint);
+}
+@media (max-width: 600px) {
+  .map-hint {
+    width: min(218px, calc(100% - 12px));
+    padding: 8px 10px;
+  }
+  #close-hint kbd {
+    display: none;
+  }
+}
+@media (max-width: 600px), (pointer: coarse) {
+  .map-hint button {
+    min-height: var(--touch-target);
+  }
+}

@@ -1,0 +1,44 @@
+<aside aria-label="Tableau de bord">
+  <section class="crew panel">
+    <div class="section-head">
+      <h2>Équipage</h2>
+      <button id="crew-fleet" class="hangar-shortcut" data-open-fleet aria-haspopup="dialog">
+        Hangar <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+    <div class="roster">
+      <button class="hero" data-hero="lest" aria-pressed="true">
+        <span class="portrait"
+          ><canvas id="portrait-lest" width="112" height="112" aria-hidden="true"></canvas
+        ></span>
+        <span class="hero-copy"><strong>Lest</strong><small>Pousse les caisses</small></span>
+        <i class="hero-indicator" aria-hidden="true"></i>
+      </button>
+      <button class="hero" data-hero="sonde" aria-pressed="false">
+        <span class="portrait"
+          ><canvas id="portrait-sonde" width="112" height="112" aria-hidden="true"></canvas
+        ></span>
+        <span class="hero-copy"><strong>Sonde</strong><small>Traverse les conduits</small></span>
+        <i class="hero-indicator" aria-hidden="true"></i>
+      </button>
+    </div>
+  </section>
+  <section class="objectives panel">
+    <div class="section-head">
+      <h2>Feuille de route</h2>
+      <span class="count" id="goal-count"></span>
+    </div>
+    <ul id="goals"></ul>
+    <button id="hint" aria-controls="map-hint" aria-expanded="false">
+      <canvas data-icon="locate"></canvas>Demander un indice
+    </button>
+  </section>
+  <section class="reserve panel">
+    <div class="section-head">
+      <h2>Réserve commune</h2>
+      <span class="count" id="charge-count"></span>
+    </div>
+    <div id="charge-meter" class="meter" role="meter" aria-label="Charges partagées" aria-valuemin="0"></div>
+    <p>Une charge déploie un pont.</p>
+  </section>
+</aside>

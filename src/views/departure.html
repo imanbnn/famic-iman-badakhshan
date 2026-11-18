@@ -1,0 +1,45 @@
+<main id="launch" aria-labelledby="launch-title">
+  <section class="departure-poster">
+    <canvas id="departure-art" width="1200" height="1000" aria-hidden="true"></canvas>
+    <canvas id="departure-water" width="600" height="500" aria-hidden="true"></canvas>
+    <div class="poster-copy">
+      <p class="eyebrow">Jeu de réflexion maritime</p>
+      <h1 id="launch-title">Contreflot</h1>
+      <p>Deux robots, trois phares à rallumer.</p>
+    </div>
+  </section>
+  <section class="departure-controls" aria-labelledby="setup-title">
+    <h2 id="setup-title" tabindex="-1">Avant de larguer les amarres</h2>
+    <fieldset class="outfitting">
+      <legend>Votre équipage</legend>
+      <button id="launch-fleet" class="hangar-entry" data-open-fleet aria-haspopup="dialog">
+        <span class="fleet-sample" aria-hidden="true"></span>
+        <strong id="fleet-count-label">Choisir parmi 24 robots</strong><span aria-hidden="true">→</span>
+      </button>
+      <p id="starter-label">Qui prend les commandes au départ ?</p>
+      <div class="starter-options" role="group" aria-labelledby="starter-label">
+        <button data-starter="lest" aria-pressed="true">
+          <canvas width="96" height="96" aria-hidden="true"></canvas
+          ><span><strong>Lest</strong><small>Pousse les caisses</small></span>
+        </button>
+        <button data-starter="sonde" aria-pressed="false">
+          <canvas width="96" height="96" aria-hidden="true"></canvas
+          ><span><strong>Sonde</strong><small>Traverse les conduits</small></span>
+        </button>
+      </div>
+    </fieldset>
+    <div class="launch-preferences">
+      <fieldset>
+        <legend>Thème du poste</legend>
+        <div class="theme-choices"></div>
+      </fieldset>
+      <button id="launch-music" class="audio-toggle" data-music aria-pressed="false">
+        <span class="music-switch" aria-hidden="true"></span><span>Musique du port</span>
+      </button>
+    </div>
+    <div class="launch-actions">
+      <button id="start-game" class="action-btn">Embarquer</button
+      ><button id="launch-guide"><canvas data-icon="buoy"></canvas>Guide pas à pas</button>
+    </div>
+  </section>
+</main>

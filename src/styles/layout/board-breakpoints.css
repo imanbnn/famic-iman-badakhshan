@@ -1,0 +1,81 @@
+@media (min-width: 850px) and (max-height: 920px) {
+  .mast-inner {
+    min-height: 46px;
+  }
+  main {
+    padding: 9px 0 12px;
+  }
+  .chapter {
+    min-height: 90px;
+    padding: 8px 21px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .map-bar {
+    min-height: 35px;
+    padding-block: 2px;
+  }
+  .signal {
+    min-height: 46px;
+    padding-block: 5px;
+  }
+  .commands {
+    padding-block: 8px;
+  }
+  aside {
+    gap: 10px;
+  }
+  .panel {
+    padding: 14px;
+  }
+  .roster {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .deck {
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) 245px;
+  }
+  .chapter {
+    min-height: 120px;
+  }
+  .commands {
+    gap: 6px;
+    padding-inline: 9px;
+  }
+  .commands button {
+    padding-inline: 7px;
+  }
+  .panel {
+    padding: 13px;
+  }
+}
+@media (max-width: 800px) {
+  .mast-inner {
+    min-height: 54px;
+  }
+  .deck {
+    grid-template-columns: 1fr;
+  }
+  .chapter {
+    margin-bottom: 12px;
+  }
+  aside {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .reserve {
+    grid-column: 1/-1;
+  }
+  .panel {
+    padding: 14px;
+  }
+  .commands button,
+  .map-bar button,
+  #hint {
+    min-height: 42px;
+  }
+}

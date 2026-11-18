@@ -1,0 +1,35 @@
+<dialog id="fleet" class="framed-dialog" aria-labelledby="fleet-title">
+  <div class="modal-head">
+    <h2 id="fleet-title">Hangar des robots</h2>
+    <button data-close aria-label="Fermer le hangar">Fermer</button>
+  </div>
+  <div class="fleet-tabs" role="tablist" aria-label="Postes de l’équipage">
+    <button role="tab" id="tab-lest" data-bay="lest" aria-controls="bay-lest" aria-selected="true">
+      <span>Manutention</span><small></small>
+    </button>
+    <button
+      role="tab"
+      id="tab-sonde"
+      data-bay="sonde"
+      aria-controls="bay-sonde"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      <span>Exploration</span><small></small>
+    </button>
+  </div>
+  <div class="dialog-scroll" id="fleet-scroll">
+    <section role="tabpanel" id="bay-lest" aria-labelledby="tab-lest">
+      <p>Choisissez le robot qui poussera les caisses sur les plaques.</p>
+      <div class="fleet-grid" role="radiogroup" aria-label="Robot de manutention"></div>
+    </section>
+    <section role="tabpanel" id="bay-sonde" aria-labelledby="tab-sonde" hidden>
+      <p>Choisissez le robot qui traversera les conduits et branchera les relais.</p>
+      <div class="fleet-grid" role="radiogroup" aria-label="Robot d’exploration"></div>
+    </section>
+  </div>
+  <div class="modal-foot fleet-foot">
+    <div><small>Équipage choisi</small><strong id="fleet-summary" role="status"></strong></div>
+    <button id="confirm-crew" class="action-btn">Confirmer</button>
+  </div>
+</dialog>

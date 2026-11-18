@@ -1,0 +1,40 @@
+<header class="mast">
+  <div class="mast-inner">
+    <div class="brand-wrap tip-anchor">
+      <button id="home" class="brand" aria-label="Contreflot, accueil" aria-describedby="home-tip">
+        <canvas id="brand-signet" width="72" height="72" aria-hidden="true"></canvas>Contreflot
+      </button>
+      <span id="home-tip" class="control-tip" role="tooltip">Revenir à l’écran de départ.</span>
+    </div>
+    <nav aria-label="Options de jeu">
+      <div id="language" class="language-switch" role="radiogroup" aria-label="Langue">
+        <label lang="fr" title="Français"
+          ><input type="radio" name="language" value="fr" aria-label="Français" checked /><span aria-hidden="true"
+            >FR</span
+          ></label
+        >
+        <label lang="en" title="English"
+          ><input type="radio" name="language" value="en" aria-label="English" /><span aria-hidden="true"
+            >EN</span
+          ></label
+        >
+      </div>
+      <button id="journal-open" hidden title="Journal de bord">
+        <canvas data-icon="book"></canvas><span class="nav-label">Journal de bord</span>
+      </button>
+      <button id="guide-open" title="Guide de bord">
+        <canvas data-icon="buoy"></canvas><span class="nav-label">Guide</span>
+      </button>
+      <button id="settings-open" title="Réglages">
+        <canvas data-icon="sliders"></canvas><span class="nav-label">Réglages</span>
+      </button>
+      <div class="sound-control tip-anchor">
+        <button id="sound" type="button" aria-pressed="true" aria-describedby="sound-tip">
+          <span class="audio-mark" aria-hidden="true"><canvas data-icon="audio"></canvas></span
+          ><span class="nav-label" id="sound-label">Son actif</span>
+        </button>
+        <span id="sound-tip" class="control-tip" role="tooltip">Couper le son</span>
+      </div>
+    </nav>
+  </div>
+</header>
